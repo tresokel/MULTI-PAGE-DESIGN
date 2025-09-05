@@ -7,8 +7,8 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: #0a0a0a; /* UPDATED: Darker background */
-    color: #cccccc; /* UPDATED: Lighter default text */
+    background-color: #0a0a0a;
+    color: #cccccc;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -27,7 +27,7 @@ main#main-content {
 
 /* Header */
 header {
-    background: #0a0a0a; /* UPDATED: Matching darker background */
+    background: #0a0a0a;
     color: #fff;
     padding: 15px 0;
     position: sticky;
@@ -77,7 +77,7 @@ header nav li {
 }
 
 header nav a {
-    color: #cccccc; /* UPDATED: Lighter text */
+    color: #cccccc;
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
@@ -85,8 +85,41 @@ header nav a {
 }
 
 header nav a:hover, header nav a.active {
-    color: #00E5FF; /* UPDATED: Cyan accent */
+    color: #00E5FF;
 }
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+.menu-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
 
 /* New Hero Section */
 #hero-new {
@@ -100,7 +133,7 @@ header nav a:hover, header nav a.active {
     align-items: center;
     min-height: calc(100vh - 71px);
     padding: 60px 0;
-    border-bottom: 1px solid #2C2C30; /* UPDATED: Darker border */
+    border-bottom: 1px solid #2C2C30;
 }
 
 #hero-new::after {
@@ -110,7 +143,7 @@ header nav a:hover, header nav a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6)); /* UPDATED: Darker gradient */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6));
     z-index: -1;
 }
 
@@ -148,16 +181,16 @@ header nav a:hover, header nav a.active {
     width: 100%;
     max-width: 300px;
     border-radius: 50%;
-    border: 5px solid rgba(0, 229, 255, 0.8); /* UPDATED: Cyan border */
-    box-shadow: 0 0 30px rgba(0, 229, 255, 0.4); /* UPDATED: Cyan glow */
+    border: 5px solid rgba(0, 229, 255, 0.8);
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
 }
 
 
 /* General Section Styling */
 section {
     padding: 80px 20px;
-    border-bottom: 1px solid #2C2C30; /* UPDATED: Darker border */
-    background-color: #0a0a0a; /* UPDATED: Darker background */
+    border-bottom: 1px solid #2C2C30;
+    background-color: #0a0a0a;
 }
 
 section:first-child {
@@ -183,7 +216,7 @@ section h3 {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 4px solid #2C2C30; /* UPDATED: Darker border */
+    border: 4px solid #2C2C30;
 }
 
 /* Projects Section */
@@ -195,16 +228,16 @@ section h3 {
 }
 
 .layanan-item {
-    background: #1A1A1D; /* UPDATED: Dark card background */
+    background: #1A1A1D;
     padding: 25px;
     border-radius: 8px;
     transition: transform 0.3s ease, border-color 0.3s ease;
-    border: 1px solid #2C2C30; /* UPDATED: Darker border */
+    border: 1px solid #2C2C30;
 }
 
 .layanan-item:hover {
     transform: translateY(-5px);
-    border-color: #00E5FF; /* UPDATED: Cyan accent */
+    border-color: #00E5FF;
 }
 
 .layanan-item img {
@@ -227,8 +260,8 @@ section h3 {
 
 /* Buttons */
 .cta-button {
-    background: #00E5FF; /* UPDATED: Cyan accent */
-    color: #0a0a0a; /* UPDATED: Dark text on button */
+    background: #00E5FF;
+    color: #0a0a0a;
     padding: 12px 28px;
     text-decoration: none;
     border-radius: 5px;
@@ -238,7 +271,7 @@ section h3 {
 }
 
 .cta-button:hover {
-    background-color: #00B8D4; /* UPDATED: Darker cyan */
+    background-color: #00B8D4;
     transform: translateY(-2px);
 }
 
@@ -253,17 +286,17 @@ section h3 {
 #contact-form input, #contact-form textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid #2C2C30; /* UPDATED: Darker border */
+    border: 1px solid #2C2C30;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
-    background-color: #1A1A1D; /* UPDATED: Darker input background */
+    background-color: #1A1A1D;
     color: #fff;
     transition: border-color 0.3s ease;
 }
 
 #contact-form input:focus, #contact-form textarea:focus {
     outline: none;
-    border-color: #00E5FF; /* UPDATED: Cyan accent */
+    border-color: #00E5FF;
 }
 
 #contact-form button {
@@ -276,18 +309,51 @@ section h3 {
 footer {
     text-align: center;
     padding: 20px;
-    background: #0a0a0a; /* UPDATED: Darker background */
-    color: #666666; /* UPDATED: Darker text */
-    border-top: 1px solid #2C2C30; /* UPDATED: Darker border */
+    background: #0a0a0a;
+    color: #666666;
+    border-top: 1px solid #2C2C30;
 }
 
 /* Responsive Media Queries */
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: row;
+    .menu-toggle {
+        display: flex; /* Show the hamburger menu */
     }
+
     header nav {
-        display: none; /* Hides nav on small screens for simplicity */
+        /* Mobile navigation panel styles */
+        position: absolute;
+        top: 71px; /* Position below header */
+        left: 0;
+        width: 100%;
+        background-color: #0a0a0a;
+        flex-direction: column;
+        align-items: center;
+        /* Hide and show with max-height transition */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+    }
+
+    header nav.is-active {
+        max-height: 300px; /* Or a height large enough for your links */
+    }
+
+    header nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    header nav li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav a {
+        display: block;
+        padding: 20px;
+        border-bottom: 1px solid #2C2C30;
     }
     
     .hero-container {
